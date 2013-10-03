@@ -1,0 +1,21 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+	// Database retrieval and insertion model for the messages table. 
+	class Messages extends CI_Model
+	{
+
+		function __construct()
+		{
+			$this->load->database();
+			parent::__construct();
+		}
+
+		public function insert_message($data)
+		{
+			$this->db->insert('messages', $data);
+		}
+
+	}
+
+/* End of file messages.php */
+/* Location: ./application/models/messages.php */
